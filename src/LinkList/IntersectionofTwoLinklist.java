@@ -1,66 +1,79 @@
-// Java Program to get intersection point of two linked lists
-// using two nested loops
+package LinkList;
 
 import java.util.*;
 
- puiblic class IntersectionofTwoLinklist {
-    int data;
-    Node next;
+public class IntersectionofTwolinklist {
 
-    Node (int new_data) {
-        data = new_data;
-        next = null;
+    // h1 is the head node of the first linked list
+    // h2 is the head node of the second linked list
+    static LinkedListNode h1, h2;
+
+    static class LinkedListNode {
+        int d;
+        LinkedListNode nxt;
+
+        LinkedListNode(int d) {
+            this.d = d;
+            nxt = null;
+        }
     }
-}
 
-public class GfG {
+    // A utility method for returning the intersection node
+    static LinkedListNode intersectionPoint(LinkedListNode h1, LinkedListNode h2) {
+        LinkedListNode p1 = h1;
+        LinkedListNode p2 = h2;
 
-    // function to get the intersection point of two linked
-    // lists head1 and head2
-    public static Node getIntersectionNode(Node head1,
-                                           Node head2) {
-        while (head2 != null) {
-            Node temp = head1;
-            while (temp != null) {
-
-                // if both Nodes are same
-                if (temp == head2)
-                    return head2;
-                temp = temp.next;
-            }
-            head2 = head2.next;
+        if (p1 == null || p2 == null) {
+            return null;
         }
 
-        // If intersection is not present between the lists,
-        // return NULL.
-        return null;
+        // Traverse through the linked lists until they reach the intersection node
+        while (p1 != p2) {
+            p1 = (p1 == null) ? h2 : p1.nxt;
+            p2 = (p2 == null) ? h1 : p2.nxt;
+        }
+
+        return p1;  // Either the intersection node or null if there's no intersection
     }
 
+    // A method for displaying the values of the nodes of a linked list
+    void displayNodes(LinkedListNode l1) {
+        while (l1 != null) {
+            System.out.print(l1.d + " ");
+            l1 = l1.nxt;
+        }
+    }
+
+    // Main method
     public static void main(String[] args) {
+        IntersectionofTwolinklist list = new IntersectionofTwolinklist();
 
-        // Create two linked lists
-        // 1st List: 3 -> 6 -> 9 -> 15 -> 30
-        // 2nd List: 10 -> 15 -> 30
-        // 15 is the intersection point
+        // Creating the first linked list
+        h1 = new LinkedListNode(113);
+        h1.nxt = new LinkedListNode(116);
+        h1.nxt.nxt = new LinkedListNode(119);
+        h1.nxt.nxt.nxt = new LinkedListNode(115);
+        h1.nxt.nxt.nxt.nxt = new LinkedListNode(130);
 
-        // creation of first list
-        Node head1 = new Node(10);
-        head1.next = new Node(15);
-        head1.next.next = new Node(30);
+        // Creating the second linked list
+        h2 = new LinkedListNode(110);
+        h2.nxt = h1.nxt.nxt.nxt;
 
-        // creation of second list
-        Node head2 = new Node(3);
-        head2.next = new Node(6);
-        head2.next.next = new Node(9);
-        head2.next.next.next = head1.next;
+        System.out.println("The first linked list is: ");
+        list.displayNodes(h1);
+        System.out.println();
 
-        Node intersectionPoint
-                = getIntersectionNode(head1, head2);
+        System.out.println("The second linked list is: ");
+        list.displayNodes(h2);
+        System.out.println();
 
-        if (intersectionPoint == null)
-            System.out.print(" No Intersection Point \n");
-        else
-            System.out.print("Intersection Point: "
-                    + intersectionPoint.data);
+        // Finding the first intersection node of the two linked lists
+        LinkedListNode intersectNode = intersectionPoint(h1, h2);
+
+        if (intersectNode != null) {
+            System.out.println("The first intersection point of the linked lists is: " + intersectNode.d);
+        } else {
+            System.out.println("The first intersection point of the linked lists does not exist.");
+        }
     }
 }
