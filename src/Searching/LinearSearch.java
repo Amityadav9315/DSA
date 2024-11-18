@@ -9,6 +9,9 @@ public class LinearSearch {
         for(int i=0; i<n; i++){
             if(array[i]==target){
                 count=i;
+                break;
+
+                
             }
         }
         System.out.println("target is at index"+" " + count);
