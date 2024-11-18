@@ -3,36 +3,48 @@ package Searching;
 import java.util.Scanner;
 
 public class BinarySearch {
-    static  void  linearsearch(int n,int array[]) {
-        int low = array[0];
-        int target = 50, fount = 0;
-        int high = array[n - 1];
+    static int binarySearch(int[] array, int target) {
+        int low = 0;
+        int high = array.length - 1;
+
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+
+            if (array[mid] == target) {
+                return mid; // Target found
+            } else if (array[mid] < target) {
+                low = mid + 1; // Search in the right half
+            } else {
+                high = mid - 1; // Search in the left half
+            }
+        }
+
+        return -1; // Target not found
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+        int[] array = new int[n];
+
+        System.out.println("Enter the elements in sorted order:");
         for (int i = 0; i < n; i++) {
-            int mid = low + ((high - low) / 2);
-            if (mid == target){
-                System.out.println(mid);
-            } else if (target > array[mid]) {
-                high = array[n-1];
-                low = array[mid+1];
-
-            } else if (target < array[mid]) {
-                high = array[mid-1];
-            }
-
+            array[i] = sc.nextInt();
         }
-        System.out.println("Not found");
 
+        System.out.print("Enter the target value to search: ");
+        int target = sc.nextInt();
 
-    }
+        int result = binarySearch(array, target);
 
-
-        public static void main (String[]args){
-            Scanner sc = new Scanner(System.in);
-            int n = sc.nextInt();
-            int[] array = new int[n];
-            for (int i = 0; i < n; i++) {
-                array[i] = sc.nextInt();
-            }
-
+        if (result != -1) {
+            System.out.println("Target found at index: " + result);
+        } else {
+            System.out.println("Target not found in the array.");
         }
+
+        sc.close();
     }
+}
