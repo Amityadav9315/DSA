@@ -9,5 +9,7 @@ public class Arrayoperstion {
         array.insert(30);
         System.out.println("array size" + array.getSize());
         array.traverse();
+        array.update(1,50);
+        array.traverse();
     }
 }
