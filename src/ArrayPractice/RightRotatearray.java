@@ -6,7 +6,7 @@ public class RightRotatearray {
     static  int rightRotate(int n,int arr[]) {
 
         int temp = arr[n - 1];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n-1; i++) {
             arr[n - 1 - i] = arr[n - 2 - i];
 
 
@@ -14,7 +14,7 @@ public class RightRotatearray {
         }
         arr[0]=temp;
         for(int x: arr){
-            System.out.println(x);
+            System.out.print(x+" ");
         }
         return -1;
 
