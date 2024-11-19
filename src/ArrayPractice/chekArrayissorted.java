@@ -13,7 +13,7 @@ public class chekArrayissorted {
 
         }
         if(count==n-1){
-            System.out.println("Array is sorted");
+            System.out.println("Array is sorted  ..");
         }
         else{
             System.out.println("Array is not sorted");
