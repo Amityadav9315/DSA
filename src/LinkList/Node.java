@@ -19,6 +19,7 @@ public class Node {
         // Create a new Node with data 10
         Node node1=new Node(34);
         Node node2=new Node(45);
+        node1.next=node2;
 
         // Print the data of the node
         System.out.println(node1.data);
