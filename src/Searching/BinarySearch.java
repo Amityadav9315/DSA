@@ -34,7 +34,7 @@ public class BinarySearch {
             array[i] = sc.nextInt();
         }
 
-        System.out.print("Enter the target value to search: ");
+        System.out.print("Enter the target value to search ");
         int target = sc.nextInt();
 
         int result = binarySearch(array, target);
