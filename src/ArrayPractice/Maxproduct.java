@@ -13,9 +13,13 @@ public class Maxproduct {
 
             }
         }
-        for(int x:array2){
-            System.out.println(x);
+        int max=array2[0];
+        for(int i=1; i<10; i++){
+            if(array2[i]>max){
+                max=array2[i];
+            }
         }
+        System.out.println(max);
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
