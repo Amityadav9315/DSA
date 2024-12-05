@@ -10,7 +10,7 @@ public class Subarraywithgivensum {
         for(int i=0; i<n; i++){
             sum2=sum2+arr[i]+arr[i+1];
             if(sum==sum2){
-                System.out.println("Sum is found");
+                System.out.println("Sum is found:");
                 System.out.println(arr[i]+","+arr[i+1]);
                 break;
             }
