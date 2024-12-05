@@ -11,15 +11,13 @@ public class Subarraywithgivensum {
             sum2=sum2+arr[i]+arr[i+1];
             if(sum==sum2){
                 System.out.println("Sum is found");
+                System.out.println(arr[i]+","+arr[i+1]);
                 break;
             }
         }
 
 
     }
-
-
-
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
