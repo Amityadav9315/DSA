@@ -18,12 +18,12 @@ public class MaxlengthofSubarrayhavingequal0and1 {
                 count2++;
             }
             if(count1==count2){
-                max=array[i];
+                max=i;
             }
 
         }
         System.out.println(max);
-        System.out.println();
+
     }
 
     public static void main(String[] args) {
