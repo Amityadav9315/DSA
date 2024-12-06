@@ -23,6 +23,7 @@ public class MaxlengthofSubarrayhavingequal0and1 {
 
         }
         System.out.println(max);
+        System.out.println();
     }
 
     public static void main(String[] args) {
