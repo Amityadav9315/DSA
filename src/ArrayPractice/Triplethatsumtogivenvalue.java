@@ -11,18 +11,23 @@ public class Triplethatsumtogivenvalue {
 //    }
 
     static void  tripletthatsum(int n,int array[]){
-        int value=0;
+
         int sum=20;
+        int value=array[0];
         for(int i=0; i<n; i++){
             for(int j=i+1; j<n-1; j++){
-                value=array[i]+array[j];
-                if(value==sum){
-                    System.out.print(array[i] + array[j]+ array[j-1]);
+                // value=array[i];
+                value=value+array[j];
+                if(value==sum) {
+                    System.out.println(array[i]);
+                    System.out.println(array[j]);
+                    System.out.println(array[j-1]);
                     break;
                 }
 
 
             }
+            value=array[i+1];
         }
     }
 
