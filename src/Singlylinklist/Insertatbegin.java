@@ -1,6 +1,8 @@
 package Singlylinklist;
 
 public class Insertatbegin {
+    //insertion at the begning
+
 
     Node head=null;
     public void insertatbegin(int item){
