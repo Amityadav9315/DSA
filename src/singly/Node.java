@@ -1,4 +1,4 @@
-package Singlylinklist;
+package  singly;
 
 public class Node {
     public int data;
@@ -10,7 +10,9 @@ public class Node {
         this.next=null;
     }
 
-    public Node(int item) {
+    public Node(int data) {
+        this.data=data;
+        this.next=null;
     }
 }
 
