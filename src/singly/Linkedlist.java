@@ -124,7 +124,10 @@ public class LinkedList {
     public boolean searchData(int data){
         Node temp=head;
         while(temp!=null){
+            if(temp.data==data)
+                return true;
 
         }
+        return false;
     }
 }
