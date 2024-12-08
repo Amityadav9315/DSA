@@ -60,9 +60,63 @@ public class LinkedList {
         }
         Node temp = head;
         while (temp != null) {
-            System.out.print(temp.data + "->");
+            System.out.print(temp.data + "=>");
             temp = temp.next;
         }
+
+    }
+
+    //delete at begninning
+    public void deleteFirst(){
+        if(head==null){
+            System.out.println("list is empty");
+            return;
+        }
+        head=head.next;
+
+    }
+    //delete from last
+    public void deleteLast(){
+        if(head==null){
+            System.out.println("List is empty no nodes to delete");
+            return;
+        }
+        if(head.next==null){
+            head=null;
+            return;
+        }
+
+
+        Node temp=head;
+        while(temp.next.next!=null)
+            temp=temp.next;
+
+
+        temp.next=null;
+
+
+
+    }
+    //delete from specific position
+    public  void deleteFromPosition(int position){
+        if(head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        if(position==0){
+            head=head.next;
+            return;
+        }
+        Node temp=head;
+        for(int i=0; i<position-1 && temp!=null; i++ )
+            temp=temp.next;
+        if(temp==null||temp.next==null){
+            System.out.println("Position is out of bound");
+            return;
+        }
+        temp.next=temp.next.next;
+
+
 
     }
 }
