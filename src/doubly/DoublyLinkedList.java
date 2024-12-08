@@ -45,6 +45,8 @@ public class DoublyLinkedList {
 
 
     }
+
+
     //at paticular position
     public void atPosition(int data){
         Scanner sc=new Scanner(System.in);
@@ -55,16 +57,59 @@ public class DoublyLinkedList {
             return;
         }
         if(position==0){
-            newNode.next = head;
-            head = newNode;
-            return;
+            newNode = head;
+            newNode.next=head.prev;
+            head=newNode;
         }
 
+    }
 
+    //delete front
 
+    public void deleteFront(){
+        if(head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        if(head.next==null){
+            head=null;
+            tail=null;
+        }
+        else{
+            head=head.next;
+            head.prev=null;
+        }
+    }
+    //delete from end
+    public void deleteEnd(){
 
+        if(tail==null){
+            System.out.println("List is empty");
+            return;
+        }
+        if(tail.prev==null){
+            head=tail=null;
 
+        }
+        else{
+            tail=tail.prev;
+            tail.next=null;
+        }
+    }
+
+    //display backward
+    public void displayBackward(){
+        Node current=tail;
+        while(current!=null){
+            System.out.print(current.data + "\t");
+            current=current.prev;
+        }
 
     }
+    //display forward
+    public void displayForward(){
+
+    }
+
 
 }
