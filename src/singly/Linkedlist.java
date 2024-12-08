@@ -126,8 +126,12 @@ public class LinkedList {
         while(temp!=null){
             if(temp.data==data)
                 return true;
+            temp=temp.next;
 
         }
         return false;
+    }
+
+    public void insertAtPosition(int data, int position) {
     }
 }

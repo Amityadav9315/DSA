@@ -8,7 +8,8 @@ public class Main {
         System.out.println("Enter 1 to insert");
         System.out.println("Enter 2 to delete");
         System.out.println("Entre 3 to search");
-        System.out.println("Entre 4 to exit");
+        System.out.println("Entre 4 to display");
+        System.out.println("Entre  5 to exit ");
         System.out.println("Entre your choice");
         System.out.println("******************");
 
@@ -37,6 +38,7 @@ public class Main {
 //        // Correct method name
 //        linkedList.printData();                  // Print the linked list
         System.out.println("Welcome to linklist app");
+        //implement data structure
         LinkedList linkedList=new LinkedList();
         Scanner scanner=new Scanner(System.in);
 
@@ -73,6 +75,9 @@ public class Main {
 
                 }
                 else if(choice==4){
+                    linkedList.printData();
+                }
+                else if(choice==5){
                 //exit
                     System.out.println("thanks for using app");
                     break;
@@ -111,9 +116,17 @@ public class Main {
         }
         else if(insertchoice==3){
             System.out.println("Entre the position");
-            int positon= scanner.nextInt();
+            int position= scanner.nextInt();
             System.out.println("Entre the data");
             int data= scanner.nextInt();
+            linkedList.insertAtPosition(data,position);
+            System.out.println("Success");
+
+        }
+        else {
+            System.out.println("invalid choice");
+
+
 
         }
     }
