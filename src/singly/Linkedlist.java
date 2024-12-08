@@ -6,7 +6,7 @@ public class LinkedList {
     static Node head = null;
 
     // Insert at the beginning
-    public  void insertAtBeginning(int item) {
+    public void insertAtBeginning(int item) {
         Node newNode = new Node(item);
         newNode.next = head;
         head = newNode;
@@ -67,56 +67,64 @@ public class LinkedList {
     }
 
     //delete at begninning
-    public void deleteFirst(){
-        if(head==null){
+    public void deleteFirst() {
+        if (head == null) {
             System.out.println("list is empty");
             return;
         }
-        head=head.next;
+        head = head.next;
 
     }
+
     //delete from last
-    public void deleteLast(){
-        if(head==null){
+    public void deleteLast() {
+        if (head == null) {
             System.out.println("List is empty no nodes to delete");
             return;
         }
-        if(head.next==null){
-            head=null;
+        if (head.next == null) {
+            head = null;
             return;
         }
 
 
-        Node temp=head;
-        while(temp.next.next!=null)
-            temp=temp.next;
+        Node temp = head;
+        while (temp.next.next != null)
+            temp = temp.next;
 
 
-        temp.next=null;
-
+        temp.next = null;
 
 
     }
+
     //delete from specific position
-    public  void deleteFromPosition(int position){
-        if(head==null){
+    public void deleteFromPosition(int position) {
+        if (head == null) {
             System.out.println("List is empty");
             return;
         }
-        if(position==0){
-            head=head.next;
+        if (position == 0) {
+            head = head.next;
             return;
         }
-        Node temp=head;
-        for(int i=0; i<position-1 && temp!=null; i++ )
-            temp=temp.next;
-        if(temp==null||temp.next==null){
+        Node temp = head;
+        for (int i = 0; i < position - 1 && temp != null; i++)
+            temp = temp.next;
+        if (temp == null || temp.next == null) {
             System.out.println("Position is out of bound");
             return;
         }
-        temp.next=temp.next.next;
+        temp.next = temp.next.next;
 
 
+    }
 
+    //for searching data
+    public boolean searchData(int data){
+        Node temp=head;
+        while(temp!=null){
+
+        }
     }
 }
