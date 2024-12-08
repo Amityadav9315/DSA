@@ -1,5 +1,7 @@
 package doubly;
 
+import java.util.Scanner;
+
 public class DoublyLinkedList {
 
     private Node head;
@@ -31,6 +33,37 @@ public class DoublyLinkedList {
 
     //add data to end
     public void addEnd(int data){
+      Node newNode=new Node(data);
+      if(tail==null){
+          head=tail=newNode;
+      }
+      else{
+          newNode.prev=tail;
+          tail.next=newNode;
+          tail=newNode;
+      }
+
+
+    }
+    //at paticular position
+    public void atPosition(int data){
+        Scanner sc=new Scanner(System.in);
+        int position=sc.nextInt();
+        Node newNode=new Node(data);
+        if(position<0){
+            System.out.println("Invalid position");
+            return;
+        }
+        if(position==0){
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+
+
+
+
+
 
     }
 
