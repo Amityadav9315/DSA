@@ -48,6 +48,8 @@ public class Main {
                 //read the choice
                 int choice =scanner.nextInt();
                 if(choice==1){
+                    //insert op
+                    insertLinkList(linkedList);
 
                 }
                 else if(choice==2){
@@ -88,6 +90,35 @@ public class Main {
         }
 
     }
+
+    private static void insertLinkList(LinkedList linkedList) {
+        printInsertMenu();
+        System.out.println("Entre the choice");
+        Scanner scanner = new Scanner(System.in);
+        int insertchoice = scanner.nextInt();
+        if(insertchoice==1){
+            System.out.println("Entre your data");
+            int data= scanner.nextInt();
+            linkedList.insertAtBeginning(data);
+            System.out.println("Success");
+        }
+        else if(insertchoice==2){
+            System.out.println("Entre your data");
+            int data=scanner.nextInt();
+            linkedList.insertAtEnd(data);
+            System.out.println("Success");
+
+        }
+        else if(insertchoice==3){
+            System.out.println("Entre the position");
+            int positon= scanner.nextInt();
+            System.out.println("Entre the data");
+            int data= scanner.nextInt();
+
+        }
+    }
+
+
     private  static  void deleteFromLinkedList(LinkedList linkedList){
 
         printDeleteMenu();
