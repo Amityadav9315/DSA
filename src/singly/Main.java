@@ -52,11 +52,11 @@ public class Main {
                 }
                 else if(choice==2){
                     //delete op
-                    dele
+                    deleteFromLinkedList(linkedList);
 
                 }
                 else if(choice==3){
-                    //search
+                    //search  op
                     System.out.println("Enter the data to search");
                     int data=scanner.nextInt();
                     boolean result=linkedList.searchData(data);
