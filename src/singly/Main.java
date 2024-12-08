@@ -96,13 +96,20 @@ public class Main {
         int deleteChoice= scanner.nextInt();
         if(deleteChoice==1){
             linkedList.deleteFirst();
+            System.out.println("Deleted");
         }
         else if(deleteChoice==2){
             linkedList.deleteLast();
+            System.out.println("Deleted");
         }
         else if(deleteChoice==3){
             System.out.println("Entre the position");
             int position=scanner.nextInt();
+            linkedList.deleteFromPosition(position);
+            System.out.println("Deleted");
+        }
+        else{
+            System.out.println("invalid choice");
         }
 
     }
