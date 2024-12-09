@@ -104,10 +104,17 @@ public class DoublyLinkedList {
             System.out.print(current.data + "\t");
             current=current.prev;
         }
+        System.out.println();
 
     }
     //display forward
     public void displayForward(){
+        Node current =head;
+        while(current!=null){
+            System.out.print(current.data +"\t");
+            current=current.next;
+        }
+        System.out.println();
 
     }
 
