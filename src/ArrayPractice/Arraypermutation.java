@@ -11,7 +11,7 @@ public class Arraypermutation {
 
         }
         for(int x:array1){
-            System.out.println(array1);
+            System.out.println(x);
         }
 
     }
