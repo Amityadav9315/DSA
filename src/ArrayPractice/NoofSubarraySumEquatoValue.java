@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class NoofSubarraySumEquatoValue {
 
     static  void noOfSubarray(int n,int array[]){
-        int value=20;
-        int sum=0;
+        int value=-10;
+        //int sum=0;
         int count=0;
         for(int i=0; i<n; i++){
+            int sum=array[i];
             for(int j=i+1; j<n; j++){
-                sum=sum+array[i]+array[j];
+                sum=sum+array[j];
                 if(sum==value){
                     count++;
                 }
