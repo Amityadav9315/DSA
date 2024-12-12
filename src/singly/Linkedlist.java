@@ -120,7 +120,7 @@ public class LinkedList {
 
     }
 
-    //for searching data in linklist odata
+    //for searching data in linklist  data
     public boolean searchData(int data){
         Node temp=head;
         while(temp!=null){
