@@ -19,6 +19,7 @@ public class countFrequencyofDigit {
             }
             if (array2[i] != visited) {
                 array2[i] = count;
+
             }
         }
             for(int i=0; i<n; i++){
