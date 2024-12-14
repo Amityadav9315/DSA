@@ -10,7 +10,7 @@ public class countFrequencyofDigit {
         for(int i=0; i<n; i++ ) {
             int count = 1;
             for (int j = i + 1; j < n; j++) {
-                if (array[i] == array2[j]) {
+                if (array[i] == array[j]) {
                     count++;
                     array2[j] = visited;
                 }
