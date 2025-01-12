@@ -7,6 +7,7 @@ public class MergeSorting {
 
 
      static void Conquer(int[] arr,int st,int mid,int ed){
+       //  int n= arr.length;
          int[] merged=new int[ed-st+1];
          int idx1=st;
          int idx2=mid+1;
@@ -25,10 +26,10 @@ public class MergeSorting {
              }
 
          while(idx2<=ed){
-                 merged[x++]=arr[idx2];
+                 merged[x++]=arr[idx2++];
              }
 
-         for(int i=0,j=st; j<=merged.length; i++,j++){
+         for(int i=0,j=st; i<merged.length; i++,j++){
              arr[j]=merged[i];
          }
      }
@@ -50,9 +51,11 @@ public class MergeSorting {
             arr[i]=sc.nextInt();
         }
         Divide(arr,0,n-1);
-        for(int i=0; i<n; i++){
+        for(int i=0; i< n; i++){
             System.out.println(arr[i]+" ");
         }
+        System.out.println();
+
 
 
     }
