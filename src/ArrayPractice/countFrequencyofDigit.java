@@ -14,7 +14,7 @@ public class countFrequencyofDigit {
                     count++;
                     array2[j] = visited;
                 }
-                System.out.println();
+
 
 
             }
