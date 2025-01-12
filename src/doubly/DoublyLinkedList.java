@@ -13,7 +13,7 @@ public class DoublyLinkedList {
 
     //add the data to front(head)
     public void addFront(int data) {
-        System.out.println();
+        System.
         Node newNode = new Node(data);
 
 
