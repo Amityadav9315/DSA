@@ -11,7 +11,14 @@ public class MergeSorting {
          int idx2=mid+1;
          int x=0;
          while(idx1<=mid&&idx2<=st){
-             if(arr[idx1])
+             if(arr[idx1]<arr[idx2]){
+                 merged[x++]=arr[idx1++];
+             }
+             else {
+                 merged[x++]=arr[idx2++];
+             }
+
+
 
          }
      }
