@@ -1,17 +1,18 @@
 package Shorting;
 
 import java.util.Scanner;
+import java.util.*;
 
 public class MergeSorting {
 
 
-     static void Conquer(int arr,int st,int mid,int ed){
+     static void Conquer(int[] arr,int st,int mid,int ed){
          int[] merged=new int[ed-st+1];
          int idx1=st;
          int idx2=mid+1;
          int x=0;
          while(idx1<=mid&&idx2<=ed){
-             if(arr[idx1]<arr[idx2]){
+             if(arr[idx1]<=arr[idx2]){
                  merged[x++]=arr[idx1++];
              }
              else {
@@ -19,40 +20,28 @@ public class MergeSorting {
              }
          }
          while (idx1<=mid){
-             if(arr[idx1]<arr[idx2]){
+
                  merged[x++]=arr[idx1++];
              }
-         }
+
          while(idx2<=ed){
-             if(arr[idx1]>arr[idx2]){
                  merged[x++]=arr[idx2];
              }
-         }
+
          for(int i=0,j=st; j<=merged.length; i++,j++){
              arr[j]=merged[i];
-
-
-
          }
-
      }
-    static void Divide(int arr,int st,int ed){
+    static void Divide(int[] arr,int st,int ed){
 
         if(st>=ed){
             return;
         }
         int mid=st+(ed-st)/2;
-        Divide(arr,st,ed);
-        Divide(arr,mid,mid+1);
+        Divide(arr,st,mid);
+        Divide(arr,mid+1,ed);
         Conquer(arr,st,mid,ed);
-
-
     }
-
-
-
-
-
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
