@@ -10,20 +10,32 @@ public class MergeSorting {
          int idx1=st;
          int idx2=mid+1;
          int x=0;
-         while(idx1<=mid&&idx2<=st){
+         while(idx1<=mid&&idx2<=ed){
              if(arr[idx1]<arr[idx2]){
                  merged[x++]=arr[idx1++];
              }
              else {
                  merged[x++]=arr[idx2++];
              }
+         }
+         while (idx1<=mid){
+             if(arr[idx1]<arr[idx2]){
+                 merged[x++]=arr[idx1++];
+             }
+         }
+         while(idx2<=ed){
+             if(arr[idx1]>arr[idx2]){
+                 merged[x++]=arr[idx2];
+             }
+         }
+         for(int i=0,j=st; j<=merged.length; i++,j++){
+             arr[j]=merged[i];
 
 
 
          }
+
      }
-
-
     static void Divide(int arr,int st,int ed){
 
         if(st>=ed){
@@ -47,6 +59,10 @@ public class MergeSorting {
         int[] arr=new int[n];
         for(int i=0; i<n; i++){
             arr[i]=sc.nextInt();
+        }
+        Divide(arr,0,n-1);
+        for(int i=0; i<n; i++){
+            System.out.println(arr[i]+" ");
         }
 
 
