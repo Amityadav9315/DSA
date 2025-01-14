@@ -8,13 +8,17 @@ public class BubbleSorting {
     static void bubblesort(int[] arr){
         for(int i=0; i<arr.length; i++){
             for(int j=0; j<arr.length-1; j++){
-                    if(arr[j]<arr[j+1]){
+                    if(arr[j]>arr[j+1]){
                         int temp=arr[j];
                         arr[j]=arr[j+1];
                         arr[j+1]=temp;
                     }
             }
 
+
+        }
+        for(int x:arr){
+            System.out.println(x);
 
         }
 
@@ -29,5 +33,6 @@ public class BubbleSorting {
 
             arr[i]=sc.nextInt();
         }
+        bubblesort(arr);
     }
 }
