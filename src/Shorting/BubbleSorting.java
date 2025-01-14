@@ -7,7 +7,9 @@ public class BubbleSorting {
 
     static void bubblesort(int[] arr){
         for(int i=0; i<arr.length){
-            for(int )
+            for(int
+                    sout
+
         }
 
     }
