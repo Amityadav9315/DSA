@@ -42,7 +42,7 @@ public class BinarySearching {
         }
         else {
             System.out.println("Not found");
-            System.out.println(ruyuyu);
+            System.out.println();
 
         }
 
