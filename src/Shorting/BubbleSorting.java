@@ -12,7 +12,7 @@ public class BubbleSorting {
                         int temp=arr[j];
                         arr[j]=arr[j+1];
                         arr[j+1]=temp;
-                        n,ljjkjkj
+                        n,ljjk
 
                     }
             }
