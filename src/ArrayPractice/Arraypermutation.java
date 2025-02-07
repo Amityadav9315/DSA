@@ -9,6 +9,7 @@ public class Arraypermutation {
             array1[n-i-1]=array[i];
 
 
+
         }
         for(int x:array1){
             System.out.println(x);
