@@ -15,6 +15,8 @@ public class CommonAmongthree {
                     if (arr[i] == arr1[j] && arr1[j] == arr2[k] && arr2[k] == arr[i]) {
                         value = arr[i];
                         break;
+                        System.out.println();
+
                     }
                 }
             }
