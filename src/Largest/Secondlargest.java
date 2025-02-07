@@ -3,7 +3,11 @@ package Largest;
 import java.util.Scanner;
 
 public class Secondlargest {
-    static void Secondlargest(){
+    int max=0;
+
+    static void Secondlargest(int n,int[] arr){
+
+
 
     }
 
