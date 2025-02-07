@@ -24,8 +24,7 @@ public class ThrirdLargest {
                 max3=arr[i];
             }
         }
-        System.out.println("Max3 is" + max3branch
-        );
+        System.out.println("Third largest is" + max3);
 
 
 
