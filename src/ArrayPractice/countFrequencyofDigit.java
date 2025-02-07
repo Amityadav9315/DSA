@@ -14,9 +14,6 @@ public class countFrequencyofDigit {
                     count++;
                     array2[j] = visited;
                 }
-
-
-
             }
             if (array2[i] != visited) {
                 array2[i] = count;
