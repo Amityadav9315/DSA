@@ -5,17 +5,18 @@ import java.util.Scanner;
 public class HollowPyramid {
 
 
-    static void hollowPyraid(int n){
-        for(int i=0; i<4; i++){
-            for(int j=0; j<7; j++){
-                if(i==1&&j==4||(i==2||i==3&&j+j==8)||i==4){
-                    System.out.println("*");
+    static void hollowPyraid(){
+        for(int i=1; i<=4; i++){
+            for(int j=1; j<=7; j++){
+                if((i==1&&j==4)||(i==2&&(i+j==5||i+j==7))||(i==3&&(i+j==5||i+j==9))||(i==4&&j%2!=0)){
+                    System.out.print("*");
                 }
                 else {
-                    System.out.println(" ");
+                    System.out.print(" ");
                 }
-                System.out.println();
+
             }
+            System.out.println();
 
         }
     }
@@ -24,6 +25,7 @@ public class HollowPyramid {
     public static void main(String[] args) {
          Scanner sc=new Scanner(System.in);
          //int n=sc.nextInt();
+        hollowPyraid();
 
 
     }
