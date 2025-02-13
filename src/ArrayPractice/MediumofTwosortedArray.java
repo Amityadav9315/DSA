@@ -23,6 +23,7 @@ public class MediumofTwosortedArray {
             System.out.print(x+" ");
         }
         System.out.println("Mid value is:"+array3[(2*n)/2]);
+        System.out.println();
 
     }
 

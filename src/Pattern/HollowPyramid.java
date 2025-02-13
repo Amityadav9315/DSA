@@ -15,7 +15,6 @@ public class HollowPyramid {
                 else {
                     System.out.print(" ");
 
-                    dgdhdhd
                 }
 
             }

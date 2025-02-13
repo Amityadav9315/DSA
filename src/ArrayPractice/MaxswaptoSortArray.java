@@ -7,6 +7,7 @@ public class MaxswaptoSortArray {
 
         // Pairing array elements with their indices
         Pair[] arrPos = new Pair[n];
+
         for (int i = 0; i < n; i++) {
             arrPos[i] = new Pair(arr[i], i);
         }
@@ -45,6 +46,7 @@ public class MaxswaptoSortArray {
         }
 
         return maxSwaps;
+
     }
 
     public static void main(String[] args) {
