@@ -8,7 +8,6 @@ public class BinarySearching {
     static int binarySearch(int[] arr) {
         int target = 33;
         int n = arr.length;
-
         int low = 0;
         int high = arr.length - 1;
         while (low <= high) {
